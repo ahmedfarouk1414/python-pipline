@@ -4,7 +4,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-            sh 'pip  --no-cache-dir install -r requirements.txt --user admin'
+            sh 'chmod 777 -R /usr/local/lib/python3.7'
+            sh 'pip  --no-cache-dir install -r requirements.txt'
       }
     }
     stage('test') {
