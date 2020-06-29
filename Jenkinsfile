@@ -1,5 +1,6 @@
 pipeline {
-  agent slave
+  //agent slave
+  agent { label: slave}
   //  agent python
   stages {
     stage('build') {
@@ -15,7 +16,7 @@ pipeline {
             sh """
             ls -la 
             pwd
-            pip3 install -r requirements.txt
+            pip install -r requirements.txt
             
             
             """
