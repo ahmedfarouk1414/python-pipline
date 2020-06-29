@@ -1,9 +1,4 @@
 pipeline {
-   agent 
-
-
-
-pipeline {
   agent label: 'slave'
   
   stages {
