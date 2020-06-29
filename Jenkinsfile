@@ -1,6 +1,10 @@
 pipeline {
-  agent { label 'jenkins-jenkins-slave' }
-       
+  agent {
+    docker {
+      image 'python:3'
+      label 'jenkins-jenkins-slave' }
+  }
+}
   //  agent python
   stages {
     stage('build') {
