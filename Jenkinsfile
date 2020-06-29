@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'python:3'
-      label 'jenkins-jenkins-slave' }
+      label 'jenkins-jenkins-slave' 
   }
 }
   //  agent python
