@@ -4,9 +4,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'adduser -D worker'
+        sh 'sudo adduser -D worker'
         sh 'cd /home/worker'
-        sh 'chown -R worker:worker /home/worker'
+        sh 'sudo chown -R worker:worker /home/worker'
         sh 'pip install --user -r requirements.txt'
       //  sh 'pip install -r requirements.txt'
       // sh python -m pip install google-assistant-sdk[samples]
