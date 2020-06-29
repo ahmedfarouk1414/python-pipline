@@ -1,12 +1,12 @@
 pipeline {
-  agent none
+  agent slave
   //  agent python
   stages {
     stage('build') {
        agent {
     //docker {
      // image 'python:3'
-      label 'python' 
+      label 'slave' 
   }
       steps {
             //sh 'chmod 777 -R /usr/local/lib/python3.7'
