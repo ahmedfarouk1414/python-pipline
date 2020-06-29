@@ -1,6 +1,8 @@
 pipeline {
   //agent slave
-  agent { label: slave}
+  agent {
+    label: 'slave'
+  }
   //  agent python
   stages {
     stage('build') {
