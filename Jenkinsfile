@@ -1,5 +1,6 @@
 pipeline {
-  agent { docker { image 'python:3.7.2-alpine' } }
+  agent { label: jenkins-jenkins-slave python }
+       
   //  agent python
   stages {
     stage('build') {
