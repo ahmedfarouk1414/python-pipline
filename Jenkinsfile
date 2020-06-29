@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'python:3.7.2' } }
+  agent { docker { image 'python:3' } }
   //  agent python
   stages {
     stage('build') {
@@ -9,7 +9,7 @@ pipeline {
        // sh source ./env/bin/activate 
        // sh python -m pip install google-assistant-sdk[samples]
         //sh python -m pip install --user google-assistant-sdk[samples]
-        sh ' pip3 install -r requirements.txt'
+        sh 'pip install --no-cache-dir -r requirements.txt'
       }
     }
     stage('test') {
