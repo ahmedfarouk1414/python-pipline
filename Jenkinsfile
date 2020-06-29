@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'jenkins-jenkins-slave python' }
+  agent { label 'jenkins-jenkins-slave' }
        
   //  agent python
   stages {
