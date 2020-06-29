@@ -9,7 +9,7 @@ pipeline {
        // sh source ./env/bin/activate 
        // sh python -m pip install google-assistant-sdk[samples]
         //sh python -m pip install --user google-assistant-sdk[samples]
-        sh 'sudo pip install -r requirements.txt --user --no-cache'
+        sh 'sudo pip install -r requirements.txt'
       }
     }
     stage('test') {
