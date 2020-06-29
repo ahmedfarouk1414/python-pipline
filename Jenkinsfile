@@ -9,8 +9,8 @@ pipeline {
     stage('build') {
       steps {
         sh 'pip install -r requirements.txt'
-        sh pwd
-        sh ls -al 
+        sh 'pwd'
+        sh 'ls -al' 
       }
     }
     stage('test') {
