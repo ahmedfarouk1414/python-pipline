@@ -1,10 +1,9 @@
 pipeline {
   agent {
-    docker {
+    //docker {
      // image 'python:3'
       label 'python' 
   }
-}
   //  agent python
   stages {
     stage('build') {
