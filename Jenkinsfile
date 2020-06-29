@@ -1,9 +1,8 @@
 pipeline {
   agent {
-        pod {
-            label 'slave'
+         label 'slave'
         }
-    }
+
   
   
   stages {
