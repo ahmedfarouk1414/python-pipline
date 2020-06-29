@@ -5,7 +5,11 @@ pipeline {
     stage('build') {
       steps {
         //sh 'pip install -r requirements.txt'
-        sh 'pip install -r requirements.txt --user --no-cache'
+        sh python3 -m venv env
+        sh source ./env/bin/activate 
+        sh python -m pip install google-assistant-sdk[samples]
+        sh python -m pip install --user google-assistant-sdk[samples]
+        //sh 'pip install -r requirements.txt --user --no-cache'
       }
     }
     stage('test') {
