@@ -10,7 +10,14 @@ pipeline {
       steps {
             //sh 'chmod 777 -R /usr/local/lib/python3.7'
             //sh 'pip  --no-cache-dir install -r requirements.txt --user'
-            sh 'pip3 install -r requirements.txt'
+        
+            sh """
+            ls -la 
+            pwd
+           # pip3 install -r requirements.txt
+            
+            
+            """
       }
     }
     stage('test') {
