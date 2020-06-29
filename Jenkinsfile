@@ -1,16 +1,17 @@
 pipeline {
-  //agent slave
-  agent {
-    label: 'slave'
-  }
-  //  agent python
+  
+  agent label: 'slave'
+  
+
   stages {
     stage('build') {
-       agent {
+    //   agent {
     //docker {
      // image 'python:3'
-      label 'slave' 
+     // label 'slave' 
   }
+      
+      
       steps {
             //sh 'chmod 777 -R /usr/local/lib/python3.7'
             //sh 'pip  --no-cache-dir install -r requirements.txt --user'
